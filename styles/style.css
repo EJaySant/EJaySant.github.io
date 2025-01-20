@@ -61,7 +61,7 @@ section {
 
 .cover-img-icon {
     width: var(--cover-icon-width);
-    background-color: rgba(180, 180, 180, 0.5);
+    background-color: rgba(180, 180, 180, 0.4);
     border-radius: 15px;
     padding: 5px;
 
