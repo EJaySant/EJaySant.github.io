@@ -11,6 +11,7 @@
     --prime-color: rgb(255, 232, 169);
     --second-color: rgb(0, 16, 104);
     --back-color: rgb(0, 6, 37);
+    --cover-icon-width: 80px;
 }
 
 body {
@@ -30,14 +31,40 @@ section {
     color: white;
 }
 
-#title-name {
-    text-align: center;
+#title {
     font-size: 4rem;
+}
+
+#cover-text {
+    text-align: center;
     height: 100%;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.5);
     display: grid;
     align-content: center;
+}
+
+#links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+#links img:hover {
+    background-color: rgba(180, 180, 180, 0.7);
+}
+
+#links img:active {
+    background-color: rgba(180, 180, 180, 0.9);
+}
+
+.cover-img-icon {
+    width: var(--cover-icon-width);
+    background-color: rgba(180, 180, 180, 0.5);
+    border-radius: 15px;
+    padding: 5px;
+
 }
 
 #project-list {
