@@ -18,10 +18,6 @@ body {
     background-color: var(--back-color);
 }
 
-section {
-    width: 100%;
-}
-
 img {
     width: 100%;
 }
@@ -71,55 +67,5 @@ img {
     border-radius: 15px;
     padding: 5px;
 
-}
-
-
-/* Projects */
-#project-list {
-    margin: 20px 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    perspective: 1000px;
-}
-
-.card {
-    width: 250px;
-    height: 280px;
-    perspective: 1000px;
-}
-
-.card-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.card-front {
-    background-color: var(--second-color);
-}
-
-.card-back {
-    transform: rotateY(180deg);
-}
-
-.card-back h2 {
-    width: 100%;
-    text-align: center;
-    background-color: var(--second-color);
-    color: white;
 }
 
