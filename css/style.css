@@ -10,7 +10,7 @@
 :root {
     --second-color: rgb(0, 0, 0);
     --back-color: rgb(240, 240, 240);
-    --cover-icon-width: 80px;
+    --cover-icon-width: calc(3em + 2vw);
 }
 
 body, 
@@ -37,6 +37,7 @@ header {
     position: sticky;
     top: 0;
     display: grid;
+    margin: 0 5%;
     grid-template-columns: 2fr 1fr;
 }
 
@@ -112,4 +113,23 @@ header {
     border-radius: 100%;
     background-color:rgba(218, 218, 218, 0.9);
     padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #cover {
+        width: 80%;
+        margin: 10vw auto;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 70%;
+    }
+
+    #cover-image {
+        grid-row: 1 / span 1;
+    }
+
+    .header-title h2 {
+        display: none;
+    }
 }
