@@ -8,42 +8,73 @@
 }
 
 :root {
-    --prime-color: rgb(255, 232, 169);
-    --second-color: rgb(0, 104, 0);
-    --back-color: rgb(0, 37, 0);
+    --second-color: rgb(0, 0, 0);
+    --back-color: rgb(240, 240, 240);
     --cover-icon-width: 80px;
 }
 
-body {
+body, 
+html {
     background-color: var(--back-color);
+    font-size: calc(0.96428571rem + 0.17857143vw);
+}
+
+h1 {
+    font-size: calc(1.60714286rem + 1.96428571vw);
 }
 
 img {
     width: 100%;
 }
 
-/* Header */
-#cover {
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.header-image {
+    width: 100px;
+}
+
+/* Header  */
+header {
+    position: sticky;
+    top: 0;
     display: grid;
-    height: 700px;
+    grid-template-columns: 2fr 1fr;
+}
+
+.header-title a {
+    display: flex;
+    align-items: center;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-links a {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 0 5vw;
+}
+
+.header-links a:hover, 
+.header-links a:active {
+    text-decoration: underline;
+    filter: drop-shadow(1px 1px 5px rgb(179, 179, 179));
+}
+
+/* Cover */
+#cover {
+    width: 80%;
+    margin: 10vw auto;
+    display: grid;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    color: white;
-}
-
-#title {
-    font-size: 4rem;
-    margin: 20px 0;
-}
-
-#cover-text {
-    text-align: center;
-    height: 100%;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: grid;
-    align-content: center;
+    grid-template-columns: 40% 30%;
 }
 
 #links ul {
@@ -61,11 +92,25 @@ img {
     background-color: rgba(180, 180, 180, 0.9);
 }
 
-.cover-img-icon {
-    width: var(--cover-icon-width);
-    background-color: rgba(180, 180, 180, 0.4);
-    border-radius: 15px;
-    padding: 5px;
-
+#cover-text {
+    text-align: center;
+    display: grid;
+    align-content: center;
 }
 
+#title {
+    margin: 20px 0;
+}
+
+#cover-image img {
+    border-radius: 100%;
+    filter: drop-shadow(0 0 10px black);
+}
+
+
+.cover-img-icon {
+    width: var(--cover-icon-width);
+    border-radius: 100%;
+    background-color:rgba(218, 218, 218, 0.9);
+    padding: 10px;
+}
